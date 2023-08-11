@@ -33,8 +33,8 @@ class ZameenScraper(scrapy.Spider):
     custom_settings = {
         'FEED_FORMAT': 'csv',
         # 'FEED_URI': 'zameen_Johar_Town_1.csv',
-        # 'FEED_URI': 'zameen_DHA_Defence_1.csv',
-        'FEED_URI': 'zameen_Bahria_Town_1.csv',
+        'FEED_URI': 'zameen_DHA_Defence_1.csv',
+        # 'FEED_URI': 'zameen_Bahria_Town_1.csv',
 
         # 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
         # 'DOWNLOAD_DELAY': 2
@@ -50,8 +50,8 @@ class ZameenScraper(scrapy.Spider):
             # cities
             # generate next page URL
             # next_page = self.base_url + 'Lahore_Johar_Town-93-' + str(page) + '.html'
-            # next_page = self.base_url + 'Lahore_DHA_Defence-9-' + str(page) + '.html'
-            next_page = self.base_url + 'Lahore_Bahria_Town-509-' + str(page) + '.html'
+            next_page = self.base_url + 'Lahore_DHA_Defence-9-' + str(page) + '.html'
+            # next_page = self.base_url + 'Lahore_Bahria_Town-509-' + str(page) + '.html'
             next_page += urllib.parse.urlencode(self.params)
 
             # This is for crawl the next page URL
